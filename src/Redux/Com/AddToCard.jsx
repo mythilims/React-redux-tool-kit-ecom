@@ -3,7 +3,7 @@ import React from 'react';
 import { Row, Col, Card, CardBody, Button, Label } from 'reactstrap';
 import { removeFromCart } from '../Slicer/AddCardSlicer';
 import { useCallback } from 'react';
-import Heder from './Heder';
+import Header from './Header';
 
 function AddToCard() {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ function AddToCard() {
 
   return (
     <div className="p-4">
-      <Heder />
+      <Header />
       <h3 className="mb-4">🛒 Your Cart</h3>
       {cartItems.length === 0 ? (
         <div>

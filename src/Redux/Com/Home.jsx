@@ -1,8 +1,8 @@
 import React from 'react';
 import CardList from './CardList';
-import Header from './Heder';
+import Header from './Header';
 
-function Das() {
+function Home() {
 
     return (
         <>
@@ -13,4 +13,4 @@ function Das() {
 
 }
 
-export default React.memo(Das);
+export default React.memo(Home);

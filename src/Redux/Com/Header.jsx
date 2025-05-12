@@ -3,9 +3,9 @@ import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Badge, Button } from 'react
 import { useSelector, useDispatch } from 'react-redux';
 import { logOut } from '../Slicer/AuthSlice';
 import {clearCart} from '../Slicer/AddCardSlicer';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,Link} from 'react-router-dom';
 
-function NavigationBar() {
+function Header() {
   const cartItems = useSelector(state => state.cardItem.cardDetails);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ function NavigationBar() {
       <NavbarBrand href="/" className="text-bg-dark">My Store</NavbarBrand>
       <Nav className="ml-auto" navbar>
         <NavItem>
-          <NavLink href="/AddToCard">
+          <NavLink tag={Link} to="/card"   >
             🛒 Cart
             <Badge color="warning" pill className="ml-2">
               {cartItems.length}
@@ -40,4 +40,4 @@ function NavigationBar() {
   );
 }
 
-export default React.memo(NavigationBar);
+export default React.memo(Header);
