@@ -3,6 +3,7 @@ import React from 'react';
 import { Row, Col, Card, CardBody, Button, Label } from 'reactstrap';
 import { removeFromCart } from '../Slicer/AddCardSlicer';
 import { useCallback } from 'react';
+import {  Link} from 'react-router-dom';
 import Header from './Header';
 
 function AddToCard() {
@@ -19,7 +20,7 @@ function AddToCard() {
       {cartItems.length === 0 ? (
         <div>
           <p>No items in cart.</p>
-          <Button color="primary" href="/">Go Back to Store</Button>
+          <Button color="warning" tag={Link} to={'/home'}>Go Back to Store</Button>
         </div>
       ) : (
         <Row>

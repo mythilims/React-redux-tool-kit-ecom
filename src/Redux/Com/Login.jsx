@@ -17,7 +17,7 @@ function Login() {
 
    useEffect (()=>{
       if (user?.accessToken) {
-        navigate("/Home");
+        navigate("/home");
       }
     }, [user, navigate]);
 

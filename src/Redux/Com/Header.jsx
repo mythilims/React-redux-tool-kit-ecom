@@ -12,7 +12,7 @@ function Header() {
 
   return (
     <Navbar color="dark" light expand="md" className="fixed-top">
-      <NavbarBrand href="/" className="text-bg-dark">My Store</NavbarBrand>
+      <NavbarBrand tag={Link} to="/"   className="text-bg-dark">My Store</NavbarBrand>
       <Nav className="ml-auto" navbar>
         <NavItem>
           <NavLink tag={Link} to="/card"   >
